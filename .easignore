@@ -1,0 +1,21 @@
+# Visual Studio files
+.vs/
+*.vsidx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# IDE files
+.vscode/
+.idea/
+# OS files
+.DS_Store
+Thumbs.db
+# Temporary files
+*.tmp
+*.temp
+# Node modules (already ignored by default, but just in case)
+node_modules/
+# Build outputs
+dist/
+build/

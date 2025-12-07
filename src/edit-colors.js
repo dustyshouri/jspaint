@@ -42,6 +42,7 @@ let dev_edit_colors = false;
 try {
 	dev_edit_colors = localStorage.dev_edit_colors === "true";
 } catch (_error) { /* ignore */ }
+
 if (dev_edit_colors) {
 	$(() => {
 		show_edit_colors_window();
@@ -51,6 +52,14 @@ if (dev_edit_colors) {
 			top: 50,
 			opacity: 0.5,
 		});
+	});
+}
+
+let always_expand_editcolors = true;
+
+if (always_expand_editcolors) {
+	$(() => {
+		$(".define-custom-colors-button").click();
 	});
 }
 
@@ -303,6 +312,7 @@ function choose_color(initial_color, callback) {
 			}
 			maybe_reenable_button_for_mobile_navigation();
 		});
+
 
 	// for mobile layout, re-enable button because it's a navigation button in that case, rather than one-time expand action
 	const maybe_reenable_button_for_mobile_navigation = () => {
@@ -665,6 +675,9 @@ function choose_color(initial_color, callback) {
 
 	set_color(initial_color);
 	update_inputs("hslrgb");
+
+	// Always expand color edit
+	$(".define-custom-colors-button").click();
 
 	$w.center();
 }

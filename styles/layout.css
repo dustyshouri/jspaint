@@ -347,7 +347,7 @@ whereas it breaks component docking calculations if used to shift the colors box
 	display: flex;
 	margin-top: 3px;
 	width: 41px;
-	height: 66px;
+	height: 129px; /* 66px */
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }

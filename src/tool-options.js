@@ -328,12 +328,12 @@ const $choose_stroke_size = $Choose(
 	(size) => stroke_size === size
 ).addClass("choose-stroke-size");
 
-const magnifications = [1, 2, 6, 8, 10];
+const magnifications = [1, 2, 6, 8, 10, 12, 14, 16, 18];
 const $choose_magnification = $Choose(
 	magnifications,
 	(scale, is_chosen, _reuse_canvas, reuse_div) => {
 		const i = magnifications.indexOf(scale);
-		const secret = scale === 10; // 10x is secret
+		const secret = scale === 18; // 20x is secret
 		const chooser_el = ChooserDiv(
 			"magnification-option",
 			is_chosen, // invert if chosen

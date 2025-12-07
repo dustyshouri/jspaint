@@ -31,6 +31,12 @@
 	color-scheme: dark;
 }
 
+.color-button::after,
+.color-selection::after,
+.edit-colors-window .swatch::after {
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, .5) inset;
+}
+
 .tool-icon {
 	background-image: url("../../images/modern/modern-dark-tools.png");
 	background-position: calc(-16px * (var(--icon-index) * 2 + 1)) -16px;
